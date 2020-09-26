@@ -35,7 +35,6 @@ pygame.draw.ellipse(screen, (157, 141, 207), (330, 255, 40, 10))
 pygame.draw.ellipse(screen, (157, 141, 207), (333, 270, 40, 10))
 pygame.draw.ellipse(screen, (157, 141, 207), (357, 227, 27, 10))
 pygame.draw.ellipse(screen, (202, 123, 223), (345, 235, 20, 7))
-
 pygame.draw.ellipse(screen, (244, 148, 205), (260, 270, 30, 15))
 pygame.draw.ellipse(screen, (244, 148, 205), (250, 280, 30, 15))
 pygame.draw.ellipse(screen, (244, 148, 205), (240, 290, 40, 15))
