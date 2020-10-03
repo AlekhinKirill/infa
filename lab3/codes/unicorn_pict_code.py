@@ -102,7 +102,7 @@ def tree(screen, color_leaves, color_apples, color_trunk, x, y, N):
 rect(screen, (9, 247, 207), (0, 0, 500, 500))
 rect(screen, (19, 248, 8), (0, 170, 500, 400))
 circle(screen, (225, 225, 0), (470, 40), 80)
-
+circle(screen, (240, 170, 0), (470, 40), 60)
 
 tree(screen, (64, 109, 33), (244, 249, 23), (111, 23, 23), 30, 150, 3 )
 tree(screen, (101, 170, 37), (255, 0, 0), (137, 109, 71), 190, 180, 3 )
