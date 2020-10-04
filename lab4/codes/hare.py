@@ -40,7 +40,7 @@ def draw_nose(surface, x, y, width, color_nose):
     Возвращаемые значения:
         Pigame.Rect: Выводит нос зайца на объет surface
     '''
-     polygon(screen, color_nose, [(x, y - width), (x - width//2 ,y - 3*width//2), (x + width//2 ,y - 3*width//2)])
+    polygon(screen, color_nose, [(x, y - width), (x - width//2 ,y - 3*width//2), (x + width//2 ,y - 3*width//2)])
 
 def draw_body(surface, x, y, width, height, color):
     '''
