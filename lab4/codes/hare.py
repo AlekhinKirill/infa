@@ -12,47 +12,50 @@ def draw_mouth(surface, x, y, width, height):
     Функция рисует рот зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} width - ширина рта
-    {int} height - высота рта
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        width (int): Ширина рта
+        height (int): Высота рта
 
     Возвращаемые значения:
-    Выводит рот зайца на экран
+        Pigame.Rect: Выводит рот зайца на объет surface
     '''
     pi = 3.14
     arc(surface, [0, 0, 0], (x, y, width, height), pi, 7*pi/4, 3)
     arc(surface, [0, 0, 0], (x - width, y, width, height), 5*pi/4, 2*pi,3)
 
 def draw_nose(surface, x, y, width, color_nose):
-     '''
+    '''
     Функция рисует нос зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} width - ширина носа
-    {int} height - высота носа
-    {tuple} color_nose - цвет носа
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        width (int): Ширина носа
+        height (int): Высота носа
+        color_nose (tuple): Цвет носа в формате RGB
 
     Возвращаемые значения:
-    Выводит нос зайца на экран
+        Pigame.Rect: Выводит нос зайца на объет surface
     '''
      polygon(screen, color_nose, [(x, y - width), (x - width//2 ,y - 3*width//2), (x + width//2 ,y - 3*width//2)])
 
 def draw_body(surface, x, y, width, height, color):
     '''
-    Функция рисует тело зайца.
+    Функция рисует туловище зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} width - ширина туловища
-    {int} height - высота туловища
-    {tuple} color - цвет туловища
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        width (int): Ширина туловища
+        height (int): Высота туловища
+        color (tuple): Цвет туловища в формате RGB
 
     Возвращаемые значения:
-    Выводит живот зайца на экран
+        Pigame.Rect: Выводит туловище зайца на объет surface
     '''
     ellipse(surface, color, (x - width // 2, y - height // 2, width, height))
     ellipse(surface, [255, 255, 255], (x - width // 3, y - height // 3, 2*width//3, 2*height//3))
@@ -63,13 +66,14 @@ def draw_head(surface, x, y, size, color):
     Функция рисует голову зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} size - размер головы
-    {tuple} color - цвет головы
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        size (int): радиус головы
+        color (tuple): Цвет головы в формате RGB
 
     Возвращаемые значения:
-    Выводит голову зайца на экран
+        Pigame.Rect: Выводит голову зайца на объет surface
     '''
     circle(surface, color, (x, y), size // 2)
 
@@ -79,32 +83,34 @@ def draw_ear(surface, x, y, width, height, color):
     Функция рисует уши зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} width - ширина ушей
-    {int} height - выысота ушей
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        width (int): Ширина ушей
+        height (int): Высота ушей
+        color (tuple): Цвет ушей в формате RGB
 
     Возвращаемые значения:
-    Выводит голову зайца на экран
+        Pigame.Rect: Выводит уши зайца на объет surface
     '''
     ellipse(surface, color, (x - width // 2, y - height // 2, width, height))
 
 
 def draw_leg(surface, x, y, width, height, color):
     '''
-    Функция рисует ноги зайца.
+    Функция рисует лапы зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} width - ширина ушей
-    {int} height - выысота ушей
-    {tuple} color - цвет ног
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        width (int): Длина лапы
+        height (int): Ширина лапы 
+        color (tuple): Цвет лап в формате RGB
 
     Возвращаемые значения:
-    Выводит голову ноги на экран
+        Pigame.Rect: Выводит лапы зайца на объет surface
     '''
-  
     ellipse(surface, color, (x - width // 2, y - height // 2, width, height))
 
 
@@ -113,14 +119,15 @@ def draw_eyes (surface, x, y, width, height, size):
     Функция рисует глаза зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} width - ширина глаз
-    {int} height - высота глаз
-    {int} size - размер зрачка
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        width (int): Ширина глаз
+        height (int): Высота глаз
+        size (int): Размер зрачка
 
     Возвращаемые значения:
-    Выводит ноги на экран
+        Pigame.Rect: Выводит глаза зайца на объет surface
     '''
     ellipse(surface, [255, 255, 255], (x - width//2, y - 4*height//3, width, height))
     ellipse(surface, [255, 255, 255], (x + width//2, y - 4*height//3, width, height))
@@ -130,17 +137,18 @@ def draw_eyes (surface, x, y, width, height, size):
 
 def draw_hare(surface, x, y, width, height, color):
     '''
-    Функция рисует(собирает) зайца на экране.
+    Функция рисует (собирает) зайца.
 
     Параметры:
-    {int} surface - объект pygame.Surface
-    {int} x, y - координаты центра изображения
-    {int} width - ширина
-    {int} height - выысота
-    {tuple} color - цвет зайца
+        surface (pygame.Surface): объект на котором происходит отрисовка
+        x (int): Абсцисса центра изображения
+        y (int): Ордината центра изображения
+        width (int): Ширина зайца
+        height (int): Высота зайца
+        color (tuple): Основной цвет в формате RGB
 
     Возвращаемые значения:
-    Выводит зайца на экран
+        Pigame.Rect: Выводит зайца на объет surface
     '''
     body_width = width // 2
     body_height = height // 2
