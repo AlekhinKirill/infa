@@ -1,5 +1,6 @@
 import pygame
 from pygame.draw import *
+import math
 
 pygame.init()
 
@@ -21,7 +22,7 @@ def draw_mouth(surface, x, y, width, height):
     Возвращаемые значения:
         Pigame.Rect: Выводит рот зайца на объет surface
     '''
-    pi = 3.14
+    pi = math.pi
     arc(surface, [0, 0, 0], (x, y, width, height), pi, 7*pi/4, 3)
     arc(surface, [0, 0, 0], (x - width, y, width, height), 5*pi/4, 2*pi,3)
 
